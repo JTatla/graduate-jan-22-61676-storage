@@ -32,3 +32,4 @@ WHERE (last_name LIKE 'M%') AND (date_of_birth BETWEEN '1940-01-01' AND '1969-12
 -- 7. Select the first and last names of the directors with natioanlity of British, French or German born between 01/01/1950 and 31/12/1980.
 SELECT first_name, last_name FROM directors 
 WHERE (nationality IN ('British', 'French', 'German')) AND (date_of_birth BETWEEN '1950-01-01' AND '1980-12-31');
+-- returns 4 rows
