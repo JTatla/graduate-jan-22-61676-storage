@@ -4,7 +4,7 @@
 SELECT * 
 FROM directors 
 WHERE nationality = 'American' 
-ORDER BY age;
+ORDER BY date_of_birth;
 -- returns 16 rows
 
 -- 2. Return the distinct nationalities from the directors table.
@@ -56,6 +56,9 @@ UNION
 SELECT MAX(domestic_takings) 
 FROM movie_revenues;
 -- returns 2 rows (0.3, 659.2)
+SELECT MAX(domestic_takings), MIN (domestic_takings) 
+FROM movie_revenues;
+-- returns 1 row (0.3, 659.2), much simpler
 
 -- 9. What is the sum total movie length for movies rated 15.
 SELECT SUM(movie_length) 
